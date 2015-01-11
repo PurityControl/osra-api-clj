@@ -12,6 +12,11 @@ To start a web server for the application, run:
 
     lein ring server
 
+** Dependencies
+
+- [[https://github.com/dakrone/cheshire][Cheshire]] a json library
+- [[https://clojure-liberator.github.io/liberator/][Liberator]] a restful resource library
+
 ** License
 
 [[file:LICENSE][MIT]]
