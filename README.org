@@ -1,0 +1,23 @@
+#+TITLE: osra-api-clj
+
+The Osra api implemented in clojure
+
+* Prerequisites
+
+You will need [[https://github.com/technomancy/leiningen][Leiningen]] 1.7.0 or above installed.
+
+** Running
+
+To start a web server for the application, run:
+
+    lein ring server
+
+** Dependencies
+
+- [[https://github.com/dakrone/cheshire][Cheshire]] a json library
+- [[https://clojure-liberator.github.io/liberator/][Liberator]] a restful resource library
+
+** License
+
+[[file:LICENSE][MIT]]
+Copyright © 2015
