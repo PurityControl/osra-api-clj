@@ -16,6 +16,8 @@ To start a web server for the application, run:
 
 - [[https://github.com/dakrone/cheshire][Cheshire]] a json library
 - [[https://clojure-liberator.github.io/liberator/][Liberator]] a restful resource library
+- [[https://github.com/clojure/java.jdbc][java jdbc]]
+- [[http://jdbc.postgresql.org/download.html][postgresql jdbc driver]]
 
 ** License
 
