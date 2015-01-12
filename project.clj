@@ -6,6 +6,8 @@
                  [hiccup "1.0.5"]
                  [liberator "0.12.2"]
                  [cheshire "5.4.0"]
+                 [org.clojure/java.jdbc "0.3.6"]
+                 [postgresql "9.3-1102.jdbc4"]
                  [ring-server "0.3.1"]]
   :plugins [[lein-ring "0.8.12"]]
   :ring {:handler osra-api-clj.handler/app
