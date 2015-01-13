@@ -1,9 +1,13 @@
 (ns osra-api-clj.routes.home
   (:require [compojure.core :refer :all]
-            [osra-api-clj.views.layout :as layout]))
+            [cheshire.core :refer [generate-string]]
+            [liberator.core
+              :refer [defresource resource request-method-in]]))
 
-(defn home []
-  (layout/common [:h1 "Hello World!"]))
+(defresource home
+  :handle-ok (fn [_] (generate-string "Success"))
+  ;;:handle-ok (generate-string "Success")
+  :etag "fixed-etag" :available-media-types ["text/json"])
 
 (defroutes home-routes
-  (GET "/" [] (home)))
+  (GET "/" request home))
