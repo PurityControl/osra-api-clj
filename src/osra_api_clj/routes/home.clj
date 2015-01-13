@@ -1,9 +1,11 @@
 (ns osra-api-clj.routes.home
   (:require [compojure.core :refer :all]
-            [osra-api-clj.views.layout :as layout]))
+            [liberator.core
+              :refer [defresource resource request-method-in]]))
 
-(defn home []
-  (layout/common [:h1 "Hello World!"]))
+(defresource home
+  :handle-ok "Success"
+  :etag "fixed-etag" :available-media-types ["text/plain"])
 
 (defroutes home-routes
-  (GET "/" [] (home)))
+  (GET "/" request home))
